@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ROCK PAPER SCISSORS</h1>
+            <p class="subtitle">Make your move</p>
+        </header>
+
+        <div class="game-area">
+            <div class="choices-container">
+                <div class="choice" id="rock">
+                    <div class="choice-inner">
+                        <img src="./images/rock.png" alt="Rock">
+                    </div>
+                    <span class="choice-label">Rock</span>
+                </div>
+                <div class="choice" id="paper">
+                    <div class="choice-inner">
+                        <img src="./images/paper.png" alt="Paper">
+                    </div>
+                    <span class="choice-label">Paper</span>
+                </div>
+                <div class="choice" id="scissors">
+                    <div class="choice-inner">
+                        <img src="./images/scissors.png" alt="Scissors">
+                    </div>
+                    <span class="choice-label">Scissors</span>
+                </div>
+            </div>
+
+            <div class="msg-container">
+                <p id="msg">Play your move</p>
+            </div>
+
+            <div class="score-board">
+                <div class="score player-score">
+                    <p class="score-label">You</p>
+                    <p id="user-score">0</p>
+                </div>
+                <div class="score-divider">vs</div>
+                <div class="score comp-score">
+                    <p class="score-label">Computer</p>
+                    <p id="comp-score">0</p>
+                </div>
+            </div>        
+        </div>
+
+        <footer>
+            <p>Choose wisely!</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
