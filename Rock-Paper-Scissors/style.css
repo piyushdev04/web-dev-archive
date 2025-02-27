@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    min-height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+h1 {
+    font-size: 3rem;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.game-area {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.choices-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.choice-inner {
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid transparent;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 0.8rem;
+}
+
+.choice-label {
+    font-weight: 600;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.choice:hover .choice-inner {
+    transform: translateY(-10px);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.choice:hover .choice-label {
+    opacity: 1;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.choice:hover img {
+    transform: scale(1.1);
+}
+
+.msg-container {
+    text-align: center;
+    margin: 2.5rem 0;
+}
+
+#msg {
+    background-color: rgba(8, 27, 49, 0.8);
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    display: inline-block;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.score {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    min-width: 120px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#user-score,
+#comp-score {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.score-divider {
+    font-size: 1.5rem;
+    font-weight: 700;
+    opacity: 0.7;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .choices-container {
+        gap: 1rem;
+    }
+
+    .choice-inner {
+        height: 110px;
+        width: 110px;
+    }
+
+    img {
+        height: 70px;
+        width: 70px;
+    }
+
+    #msg {
+        font-size: 1.2rem;
+    }
+
+    .score-board {
+        gap: 1.5rem;
+    }
+
+    .score {
+        min-width: 100px;
+        padding: 1rem;
+    }
+
+    #user-score,
+    #comp-score {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .choices-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .choice-inner {
+        height: 90px;
+        width: 90px;
+    }
+
+    img {
+        height: 60px;
+        width: 60px;
+    }
+
+    #msg {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .score {
+        min-width: 80px;
+        padding: 0.8rem;
+    }
+
+    #user-score,
+    #comp-score {
+        font-size: 2rem;
+    }
+}
