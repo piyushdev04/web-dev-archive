@@ -57,7 +57,7 @@ body.dark h1 {
     border-radius: 10px;
     background-color: #6e8efb;
     color: white;
-    cursor: white;
+    cursor: pointer;
     transition: background 0.3s ease;
 }
 
