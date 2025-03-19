@@ -63,7 +63,7 @@ socket.on('userDisconnected', (msg) => {
 let typingTimeout;
 messageInput.addEventListener('input', () => {
     if (username) {
-        socket.emit(typingTimeout);
+        socket.emit('typing');
         clearTimeout(typingTimeout);
         typingTimeout = setTimeout(() => socket.emit('stopTyping'), 1000);
     }
